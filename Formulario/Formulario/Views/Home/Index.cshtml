@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Formulário do Quintino</title>
+</head>
+<body>
+    <div>
+
+
+
+
+
+        <!-- começar a fazer qq coisa... crtl + k, ctrl + c -->
+        @* este comentario nao
+        é visivel para o utilzador, apenas p/ o servidor*@
+        <h2> O meu Formulário</h2>
+        @* formulario para receber os meus dados...*@
+        <!-- Utilizar o metodo POST no HTTP, porque passa escondido, nao apresenta o comando -->
+        <form method="post">
+
+            <!-- o ID serve p utilizar do lado do cliente, com javascript, css, etc... -->
+            Qual o seu nome? <input type="text" maxlength="20" name="nome" /> <br />
+            <!--deve-se especificar o campo de numerico como number - só para inteiro-->
+            Qual é a sua idade? <input type="number" maxlength="3" name="idade" /> <br />
+            <br />
+            <input type="submit" value="Enviar os dados para o servidor" />
+
+        </form>
+
+        @if(ViewBag.Resposta !="")
+        {
+        <text>
+            <script>
+            // para o razor interpretar nao como string mas como objeto do saco e eu quero saber o conteudo
+            alert("@ViewBag.Resposta");
+            </script>
+        </text>
+        }
+
+    </div>
+</body>
+</html>
