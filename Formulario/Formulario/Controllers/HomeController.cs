@@ -15,6 +15,7 @@ namespace Formulario.Controllers
             // necessario para ter um valor para o razor
             // para inicializar a variavel
             // inicializar valor inicial do ViewBag
+
             ViewBag.Resposta = "";
 
             return View();
