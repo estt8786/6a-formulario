@@ -15,25 +15,37 @@
         <!-- começar aqui o meu Formulário crtl + k, ctrl + c -->
         @* este comentario nao
             é visivel para o utilzador, apenas p/ o servidor*@
-        <h2> O meu Formulário...de TI2!</h2>
+        <h2> O meu formulário maravilhoso...de TI2!</h2>
 
         @* formulario para receber os meus dados...*@
         <!-- Utilizar o metodo POST no HTTP,
-            porque passa escondido, nao apresenta o comando -->
+        porque passa escondido, nao apresenta o comando -->
         <form method="post">
 
             <!-- o ID serve p utilizar do lado do cliente, com javascript, css, etc... -->
-            Qual o seu nome? <input type="text" maxlength="20" name="nome" required="required" /> <br />
+            Qual o seu nome? <input type="text"
+                                    maxlength="20"
+                                    name="nome"
+                                    required="required" />
+            <br />
 
             <!--deve-se especificar o campo de numerico como number - só para inteiro-->
-            Qual é a sua idade? <input type="number" maxlength="3" name="idade" required="required" max="120" min="1" />
+            Qual é a sua idade? <input type="number"
+                                       maxlength="3"
+                                       name="idade"
+                                       required="required"
+                                       max="120"
+                                       min="1" />
             <br />
             <br />
             <input type="submit" value="Enviar os dados para o servidor" />
+            <!--<button>Enviar formulário</button> -->
+            <!-- <input type="submit" value="Enviar formulário" /> -->
 
         </form>
 
-        @if (ViewBag.Resposta != ""){
+        @if (ViewBag.Resposta != "")
+        {
             // este IF garante que o ALERT apenas aparece se a 'resposta' tiver algum conteúdo
             <text>
                 <script>
@@ -45,5 +57,6 @@
         }
 
     </div>
+    <h4>©2019 by Quintino</h4>
 </body>
 </html>
