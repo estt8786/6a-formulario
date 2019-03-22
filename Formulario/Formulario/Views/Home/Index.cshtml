@@ -12,24 +12,28 @@
 </head>
 <body>
     <div>
-        <!-- começar aqui o meu Formulário crtl + k, ctrl + c -->
+        <!-- começar aqui o meu Formulário
+            crtl + k, ctrl + c , para comentar linhas-->
+
         @* este comentario nao
             é visivel para o utilzador, apenas p/ o servidor*@
-        <h2> O meu formulário maravilhoso...de TI2!</h2>
+
+        <h2> O meu formulário...de TI2!</h2>
 
         @* formulario para receber os meus dados...*@
         <!-- Utilizar o metodo POST no HTTP,
         porque passa escondido, nao apresenta o comando -->
         <form method="post">
 
-            <!-- o ID serve p utilizar do lado do cliente, com javascript, css, etc... -->
+            <!-- o ID serve p utilizar do lado do cliente, com javascript, css, etc... 
+                neste caso não é necessário -->
             Qual o seu nome? <input type="text"
                                     maxlength="20"
                                     name="nome"
                                     required="required" />
             <br />
 
-            <!--deve-se especificar o campo de numerico como number - só para inteiro-->
+            <!--deve-se especificar o campo de numerico como number - só qd é um inteiro-->
             Qual é a sua idade? <input type="number"
                                        maxlength="3"
                                        name="idade"
@@ -39,17 +43,16 @@
             <br />
             <br />
             <input type="submit" value="Enviar os dados para o servidor" />
-            <!--<button>Enviar formulário</button> -->
+            <!-- <button>Enviar formulário</button> -->
             <!-- <input type="submit" value="Enviar formulário" /> -->
 
         </form>
 
-        @if (ViewBag.Resposta != "")
-        {
+        @if (ViewBag.Resposta != ""){
             // este IF garante que o ALERT apenas aparece se a 'resposta' tiver algum conteúdo
             <text>
                 <script>
-                    // para o razor interpretar nao como string mas como objeto do saco
+                    // para o razor interpretar, nao como string mas como objeto que esta no saco
                     // e eu quero saber o seu conteudo
                     alert("@ViewBag.Resposta");
                 </script>
@@ -57,6 +60,6 @@
         }
 
     </div>
-    <h4>©2019 by Quintino@ipt</h4>
+    <h4>©2019 by Quintino@ipt_20.03.2019</h4>
 </body>
 </html>
