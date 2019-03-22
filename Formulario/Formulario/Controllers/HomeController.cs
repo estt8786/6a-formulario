@@ -29,6 +29,7 @@ namespace Formulario.Controllers
         // receber os dados que vem do servidor
         // criar um break point ---executar e vai para aqui
         // os tipos primitivos nao podem ser nulos, entao com o int+? pode conter nulos...
+        // o int? admite valores null, caso não seja preenchido ou esteja errado o tipo de 
         public ActionResult Index(string nome, int? idade)
         {
             // Precisamos de validar os dados introduzidos pelo utilizador
@@ -45,12 +46,14 @@ namespace Formulario.Controllers
             //}
 
             // Validar a idade
+            //if(idade != null && idade >= 10 && idade = 120) 
             if(idade >= 0 && idade <= 120){
                 // criar mensagem da resposta
                 resposta = "Voce chama-se " + nome +" e tem " + idade + " anos!";
             }
             else
             {
+                //if(nome != "")
                 // mensagem alternativa
                 resposta = "Deve especificar uma idade váilda!\n" +
                             "A idade deve ser maior que zero e menor que 120 anos...";
