@@ -9,7 +9,7 @@ namespace Formulario.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Index()
+        public ActionResult Index() 
         {
             // responde ao GET porque é o que ele responde por defeito no HTTP...
             // necessario para ter um valor para o razor
@@ -29,7 +29,7 @@ namespace Formulario.Controllers
         // receber os dados que vem do servidor
         // criar um break point ---executar e vai para aqui
         // os tipos primitivos nao podem ser nulos, entao com o int+? pode conter nulos...
-        // o int? admite valores null, caso não seja preenchido ou esteja errado o tipo de 
+        // o int? admite valores null, caso não seja preenchido ou esteja errado o tipo de dados
         public ActionResult Index(string nome, int? idade)
         {
             // Precisamos de validar os dados introduzidos pelo utilizador
@@ -55,7 +55,7 @@ namespace Formulario.Controllers
             {
                 //if(nome != "")
                 // mensagem alternativa
-                resposta = "Deve especificar uma idade váilda!\n" +
+                resposta = "Deve especificar uma idade válida!\n" +
                             "A idade deve ser maior que zero e menor que 120 anos...";
             }
 
